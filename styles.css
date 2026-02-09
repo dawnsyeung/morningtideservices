@@ -58,19 +58,29 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  position: relative;
+  gap: 0;
+  width: min(260px, 100%);
+  height: 40px;
+  background: url("/morningtidelogo0209.png") no-repeat left center;
+  background-size: contain;
   text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.02em;
 }
 
 .brand-badge {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: radial-gradient(circle at top, #f8fafc 0%, #7dd3fc 40%, #0ea5e9 100%);
-  border: 1px solid rgba(248, 250, 252, 0.6);
-  box-shadow: 0 0 18px rgba(125, 211, 252, 0.4);
+  display: none;
+}
+
+.brand span:last-child {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .nav-links {
