@@ -64,16 +64,22 @@ a {
   letter-spacing: 0.02em;
 }
 
-.brand-badge {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background-image: url("/morningtidelogo0209.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 1px solid rgba(248, 250, 252, 0.6);
-  box-shadow: 0 0 18px rgba(125, 211, 252, 0.4);
+.brand-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .nav-links {
