@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact &amp; Pilot Assessment | Morningtide Services</title>
+  <meta name="description" content="Request a pilot assessment for aquaculture BSFL bioprocessing. Tell us your feedstock types, volumes, and desired outputs, and we’ll propose batch testing and an operational plan." />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","@id":"https://www.morningtideservices.com/#org","name":"Morningtide Services","url":"https://www.morningtideservices.com","email":"info@morningtideservices.com","telephone":"+1-000-000-0000","logo":"https://www.morningtideservices.com/Morningtide.png"},
+      {"@type":"WebSite","@id":"https://www.morningtideservices.com/#website","url":"https://www.morningtideservices.com","name":"Morningtide Services","publisher":{"@id":"https://www.morningtideservices.com/#org"}},
+      {"@type":"ContactPage","@id":"https://www.morningtideservices.com/contact.html#webpage","url":"https://www.morningtideservices.com/contact.html","name":"Contact & Pilot Assessment","isPartOf":{"@id":"https://www.morningtideservices.com/#website"},"about":{"@id":"https://www.morningtideservices.com/#org"}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/index.html"><span class="brand-badge"></span><span>Morningtide Services</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/index.html">Home</a><a href="/services.html">Services</a><a href="/industries.html">Industries</a><a href="/how-it-works.html">How It Works</a><a href="/about.html">About</a><a class="active" href="/contact.html">Contact</a>
+      </nav>
+      <a class="btn" href="/contact.html">Request a Pilot Assessment</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="kicker">Pilot assessment</div>
+        <h1>Request a pilot proposal.</h1>
+        <p class="lede">Share your feedstock profile and site constraints. We’ll propose batch testing, diet management, operations model, and offtake plan.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="card">
+          <h2>What to include</h2>
+          <ul class="list">
+            <li>Operation type: shrimp / finfish / RAS / algae / processing</li>
+            <li>Feedstock types and estimated weekly volume</li>
+            <li>Handling constraints (cold storage, grinding, staging)</li>
+            <li>Desired outputs (live larvae, optional post-processing)</li>
+            <li>Current disposal method and pain points (optional)</li>
+            <li>Biosecurity requirements (if applicable)</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="small"><strong>Email:</strong> info@morningtideservices.com<br><strong>Phone:</strong> +1-000-000-0000</p>
+        </div>
+
+        <div class="card">
+          <h2>Inquiry form</h2>
+          <form class="form" method="post" action="#">
+            <input name="company" placeholder="Company / Farm Name" required />
+            <input name="name" placeholder="Your Name" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <select name="operation" required>
+              <option value="" disabled selected>Operation Type</option>
+              <option>Shrimp Farm / Hatchery</option>
+              <option>Finfish Farm</option>
+              <option>RAS Facility</option>
+              <option>Fish Processor</option>
+              <option>Algae Producer</option>
+              <option>Integrated Aquaculture</option>
+              <option>Other</option>
+            </select>
+            <input name="volume" placeholder="Feedstock volume (lbs/week or tons/week)" />
+            <textarea name="feedstocks" placeholder="Feedstock description (fish scraps, shrimp heads/shells, algae biomass, etc.)"></textarea>
+            <textarea name="notes" placeholder="Site constraints, desired outputs, biosecurity notes, timeline"></textarea>
+            <button class="btn" type="submit">Submit Request</button>
+            <div class="note small">This form is a template. Connect it to Webflow Forms, HubSpot, or your email endpoint when deploying.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="small">© <span id="y5"></span> Morningtide Services.</div></div></footer>
+  <script>document.getElementById("y5").textContent=new Date().getFullYear();</script>
+</body>
+</html>
