@@ -55,7 +55,7 @@
 
         <div class="card">
           <h2>Inquiry form</h2>
-          <form class="form" method="post" action="https://formspree.io/f/xdapeqdr">
+          <form class="form" id="contact-form">
             <input name="company" placeholder="Company / Farm Name" required />
             <input name="name" placeholder="Your Name" required />
             <input name="email" type="email" placeholder="Email" required />
@@ -79,7 +79,60 @@
     </section>
   </main>
 
+  <div id="form-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box">
+      <h3>Thank you for your inquiry.</h3>
+      <p>We've received your submission and will be in touch shortly to discuss next steps.</p>
+      <button class="btn modal-close" type="button">Close</button>
+    </div>
+  </div>
+
   <footer class="footer"><div class="container"><div class="small">© <span id="y5"></span> Morningtide Services LLC.</div></div></footer>
   <script>document.getElementById("y5").textContent=new Date().getFullYear();</script>
+  <script>
+  (function(){
+    var form=document.getElementById("contact-form");
+    var modal=document.getElementById("form-modal");
+    var closeBtn=modal.querySelector(".modal-close");
+
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type="submit"]');
+      btn.disabled=true;
+      btn.textContent="Submitting\u2026";
+
+      fetch("https://formspree.io/f/xdapeqdr",{
+        method:"POST",
+        body:new FormData(form),
+        headers:{"Accept":"application/json"}
+      }).then(function(r){
+        if(r.ok){
+          form.reset();
+          modal.classList.add("visible");
+          modal.setAttribute("aria-hidden","false");
+        }else{
+          alert("Something went wrong. Please try again or email us directly.");
+        }
+      }).catch(function(){
+        alert("Network error. Please check your connection and try again.");
+      }).finally(function(){
+        btn.disabled=false;
+        btn.textContent="Submit Request";
+      });
+    });
+
+    closeBtn.addEventListener("click",function(){
+      modal.classList.remove("visible");
+      modal.setAttribute("aria-hidden","true");
+    });
+
+    modal.addEventListener("click",function(e){
+      if(e.target===modal){
+        modal.classList.remove("visible");
+        modal.setAttribute("aria-hidden","true");
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
